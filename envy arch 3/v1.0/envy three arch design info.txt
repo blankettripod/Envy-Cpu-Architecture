@@ -1,0 +1,88 @@
+arch = envy
+revision = v3.0
+codename = epsilon
+
+registers = 16
+	special registers = none
+	register functions
+		write
+		increment
+		decrement
+
+alu's = 1
+	functions
+		add
+		subtract
+		multiply
+		divide
+		left shift
+		right shift
+		and
+		or
+		xor
+		nand
+		nor
+		xnor
+	flags
+		carry		1
+		negative	2
+		zero		3
+		greater than	4
+		equal		5
+		less than	6
+		not equal	7
+
+cache spaces
+	code 
+		size = 64KiB
+		connected to
+			instruction register
+			port data in
+	data
+		size = 64KiB
+		connected to
+			registers
+			data memory address
+			code memory address
+			alu
+			port data in
+			port data out
+
+clu
+	modes = 2
+	nodes
+		instruction register in
+		instruction register out
+		data cache in
+		data cache out
+		code cache in
+		code cache  out
+		data memory address register in
+		code memory address register in
+		program counter count
+		program counter out
+		program counter load
+		program counter load on flag
+		register instruction bit 0
+		register instruction bit 1
+		alu instruction bit 0
+		alu instruction bit 1
+		alu instruction bit 2
+		alu instruction bit 3
+		flag check bit 0
+		flag check bit 1
+		flag check bit 2
+		alu output
+		register read 1
+		register read 2
+		core in
+		core out
+
+ports 2
+	port in
+		databits = 32
+		portbits = 8
+	port out
+		databits = 32
+		portbits = 8
+
