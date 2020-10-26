@@ -1,0 +1,20 @@
+; a program meant to calculate fibbonaci sequence
+
+.section .data
+init1: 0		ef0
+init2: 1		ef1
+outp: 0			ef3
+
+.section .text
+global _start
+
+_start:
+lda [init1]		1000ef0		; load initial values
+ldb [init2]		2000ef1
+run:					;run function
+addm [outp]		a000ef3		; store output of add
+lda [init1]		1000ef0		; wipe register a
+addc			9000000		; store register b to register c
+cta			4000000		; put register c into register a
+ldb [outp]		2000ef3		; put the output into register b
+jmp run			6000002		; go back to run function
