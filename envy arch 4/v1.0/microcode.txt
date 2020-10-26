@@ -1,0 +1,106 @@
+ir out		1
+ir in		2
+mem out		4
+mem in		8
+ra in		10
+rb in		20
+rc in		40
+rc out		80
+alu mode 0	100
+alu mode 1	200
+alu mode 2	400
+alu mode 3	800
+flag 0		1000
+flag 1		2000
+flag 2		4000
+pc in		8000
+pc in flag	10000
+pc out		20000
+pc count	40000
+alu out		80000
+mem addr in	100000
+
+fetch:
+120000
+40006
+
+noop 0 :
+
+lda 1 :
+100001
+14
+
+ldb 2 :
+100001
+24
+
+
+ldc 3 :
+100001
+44
+
+cta 4 :
+90
+
+ctb 5 :
+a0
+
+jmp 6 :
+8001
+
+adda 7 :
+80010
+
+addb 8 :
+80020
+
+addc 9 :
+80040
+
+addm a :
+100001
+80008
+
+
+suba b :
+80110
+
+subb c :
+80120
+
+subc d :
+100001
+80140
+
+subm e :
+100001
+80108
+
+
+mula f :
+80210
+
+mulb 10 :
+80220
+
+mulc 11 :
+80240
+
+mulm 12 :
+100001
+80208
+
+
+diva 13 :
+80310
+
+divb 14 :
+80320
+
+divc 15 :
+80340
+
+divm 16 :
+100001
+80308
+
