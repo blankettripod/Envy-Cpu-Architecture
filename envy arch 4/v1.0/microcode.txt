@@ -19,6 +19,8 @@ pc out		20000
 pc count	40000
 alu out		80000
 mem addr in	100000
+core in		200000
+core out	400000
 
 fetch:
 120000
@@ -118,8 +120,17 @@ lrrc 19 :
 
 str 1a :
 100001
-48
+88
 
 srr 1b : 
 100080
-48
+88
+
+cin 1c :
+200080
+
+
+cout 1d :
+100001
+84
+400084
