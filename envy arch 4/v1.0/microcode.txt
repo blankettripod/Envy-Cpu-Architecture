@@ -134,3 +134,12 @@ cout 1d :
 100001
 84
 400084
+
+jmpz 1e :
+
+
+jmpn 1f :
+
+
+cmp 20 :
+alu out
